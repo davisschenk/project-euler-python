@@ -11,3 +11,13 @@ def lcm(multiples):
         ans = ((i * ans) / (gcd(i, ans)))
 
     return ans
+
+
+def product(arr):
+    value = 1
+
+    for num in arr:
+        value *= num
+
+    return value
+
