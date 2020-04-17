@@ -2,7 +2,7 @@
  
 This is my repository for keeping track of all problems I complete as a part of [Project Euler](https://projecteuler.net/).
 
-##Goals
+## Goals
 - Organize and keep track of all problems without hard coding them and then being able to automatically test all of my solutions
 - Keeping all working solutions
 - Avoiding the use of outside modules for solving problems
@@ -10,4 +10,4 @@ This is my repository for keeping track of all problems I complete as a part of 
 
 
 
-#####DISCLAIMER: This repository contains answers and code for each of the problems I have completed.
+##### DISCLAIMER: This repository contains answers and code for each of the problems I have completed.
