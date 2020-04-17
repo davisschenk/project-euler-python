@@ -1,5 +1,6 @@
 import time
 from datetime import timedelta
+import re
 
 
 class SolutionOutput:
@@ -45,11 +46,12 @@ class ProblemMeta(type):
         new_cls = super().__new__(mcs, name, bases, attrs)
 
         # TODO: Change this from using len of bases
-        # Makes sure that we are modifying a subclass of Problem and not Problem
-        if len(bases) > 0:
+        # Makes sure that we are modifying a subclass of Problem and not Problem and that Problem isnt being run as main
+        if len(bases) > 0 and new_cls.__module__ != "__main__":
             new_cls.solutions = [obj for name, obj in attrs.items() if isinstance(obj, Solution)]
             new_cls.name = kwargs.pop("name")
             new_cls.expected = kwargs.pop("expected", None)
+            new_cls.problem_number = re.search(r"\.([0-9]+)_", new_cls.__module__).group(1)
 
         return new_cls
 

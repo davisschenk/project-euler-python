@@ -8,7 +8,8 @@ from problems import *
 
 def print_output():
     for problem in Problem.all_problems():
-        print(problem.name)
+        print(f"{problem.problem_number}. {problem.name}")
+        print(f"\tExpected Value: {problem.expected}")
         for solution in problem.solutions:
             result = solution.profile()
             print(f"\t{solution.name}\n\t\tTime: {result.time.microseconds} ms\n\t\tOutput: {result.output}")

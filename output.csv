@@ -1,21 +1,21 @@
 Problem,Solution,Execution Time (ms),Output
-Multiples of 3 and 5,summed_sums,30,233168.0
-Multiples of 3 and 5,brute_force,1110,233168
-Even Fibonacci numbers,naive,12,4613732
-Even Fibonacci numbers,use_only_even,6,4613732
-Largest prime factor,check_all,926,6857
-Largest prime factor,check_only_odd,466,6857
-Largest prime factor,simple,1172,6857.0
-Largest prime factor,squared,165,6857
-Largest palindrome product,brute_force,240686,906609
-Largest palindrome product,improved_brute_force,287846,906609
-Largest palindrome product,improved_search,739,906609
-Smallest multiple,least_common_multiple,36,232792560.0
-Sum square difference,brute_force,44,25164150
-Sum square difference,math,6,25164150.0
-10001st prime,eratosthenes_nth_prime,26305,104743
-Largest product in a series,brute_force,3147,23514624000
-Special Pythagorean triplet,brute_force,18201,31875000
-Special Pythagorean triplet,parametrisation,23,31875000.0
-Summation of primes,sieve_of_eratosthenes,610174,142913828922
-Summation of primes,brute_force,189686,142913828922
+Multiples of 3 and 5,summed_sums,11,233168.0
+Multiples of 3 and 5,brute_force,1023,233168
+Even Fibonacci numbers,naive,10,4613732
+Even Fibonacci numbers,use_only_even,5,4613732
+Largest prime factor,check_all,842,6857
+Largest prime factor,check_only_odd,404,6857
+Largest prime factor,simple,1063,6857.0
+Largest prime factor,squared,164,6857
+Largest palindrome product,brute_force,328270,906609
+Largest palindrome product,improved_brute_force,169829,906609
+Largest palindrome product,improved_search,662,906609
+Smallest multiple,least_common_multiple,33,232792560.0
+Sum square difference,brute_force,40,25164150
+Sum square difference,math,5,25164150.0
+10001st prime,eratosthenes_nth_prime,24200,104743
+Largest product in a series,brute_force,2890,23514624000
+Special Pythagorean triplet,brute_force,17028,31875000
+Special Pythagorean triplet,parametrisation,18,31875000.0
+Summation of primes,sieve_of_eratosthenes,605795,142913828922
+Summation of primes,brute_force,880216,142913828922
