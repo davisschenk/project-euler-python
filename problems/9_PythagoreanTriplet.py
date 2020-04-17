@@ -3,7 +3,7 @@ from utils.math import gcd
 from math import ceil, sqrt
 
 
-class PythagoreanTriplet(Problem, name="Special Pythagorean triplet"):
+class PythagoreanTriplet(Problem, name="Special Pythagorean triplet", expected=31875000):
     @Problem.solution()
     def brute_force(self, ts=1000):
         for a in range(3, round((ts-3)/2)):

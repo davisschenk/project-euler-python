@@ -2,7 +2,7 @@ import math
 from problem import Problem
 
 
-class SumEvenFib(Problem, name="Even Fibonacci numbers"):
+class SumEvenFib(Problem, name="Even Fibonacci numbers", expected=4613732):
     @staticmethod
     def fib(limit=None):
         curr, next_value = 0, 1

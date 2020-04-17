@@ -2,7 +2,7 @@ from itertools import count, takewhile
 from problem import Problem
 
 
-class MultiplesOr(Problem, name="Multiples of 3 and 5"):
+class MultiplesOr(Problem, name="Multiples of 3 and 5", expected=233168):
     @Problem.solution()
     def summed_sums(self):
         return self.sum_divisible_by(3, 999) + self.sum_divisible_by(5, 999) - self.sum_divisible_by(15, 999)

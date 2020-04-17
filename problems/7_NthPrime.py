@@ -3,7 +3,7 @@ from utils.primes import sieve_of_eratosthenes
 from problem import Problem
 
 
-class NthPrime(Problem, name="10001st prime"):
+class NthPrime(Problem, name="10001st prime", expected=104743):
     @Problem.solution()
     def eratosthenes_nth_prime(self, n=10001):
         # https://www.maa.org/sites/default/files/jaroma03200545640.pdf

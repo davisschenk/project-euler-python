@@ -2,7 +2,7 @@ from math import sqrt
 from problem import Problem
 
 
-class LargestPrimeFactor(Problem, name="Largest prime factor"):
+class LargestPrimeFactor(Problem, name="Largest prime factor", expected=6857):
     number = 600851475143
 
     @Problem.solution()

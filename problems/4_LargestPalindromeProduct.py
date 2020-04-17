@@ -1,7 +1,7 @@
 from problem import Problem
 
 
-class LargestPalindromeProduct(Problem, name="Largest palindrome product"):
+class LargestPalindromeProduct(Problem, name="Largest palindrome product", expected=906609):
     @Problem.solution()
     def brute_force(self):
         best = 0

@@ -1,7 +1,7 @@
 from problem import Problem
 
 
-class SumSquareDifference(Problem, name="Sum square difference"):
+class SumSquareDifference(Problem, name="Sum square difference", expected=25164150):
     @Problem.solution()
     def brute_force(self, limit=100):
         nums = range(1, limit+1)
