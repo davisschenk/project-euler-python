@@ -29,4 +29,4 @@ def write_file():
                 writer.writerow([problem.name, solution.name, result.time.microseconds, result.output])
 
 
-write_file()
+print_output()
