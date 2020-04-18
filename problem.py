@@ -1,6 +1,9 @@
 import time
 from datetime import timedelta
 import re
+import traceback
+import inspect
+import textwrap
 
 
 class SolutionOutput:
@@ -15,9 +18,10 @@ class SolutionOutput:
 class Solution:
     """A class that represents a problem solution"""
 
-    def __init__(self, solution, name=None):
+    def __init__(self, solution, name=None, ignored=False):
         self.solution = solution
         self.name = name or solution.__name__
+        self.ignored = ignored
         self.problem = None
 
     def __call__(self, *args, **kwargs):
@@ -26,15 +30,25 @@ class Solution:
         except Exception as exc:
             return exc
 
-    def profile(self):
-        start_time = time.perf_counter_ns()
+    def profile(self) -> SolutionOutput:
+        start_time = time.perf_counter()
         output = self.__call__()
-        end_time = time.perf_counter_ns()
+        end_time = time.perf_counter()
 
         return SolutionOutput(
             output=output,
-            time=timedelta(microseconds=(end_time - start_time) / 1000)
+            time=end_time-start_time
         )
+
+    def text(self) -> str:
+        if not self.ignored:
+            result = self.profile()
+            if not isinstance(result.output, Exception):
+                return textwrap.indent(f"{self.name}\n\tOutput: {result.output}\n\tTime: {result.time} seconds", "\t")
+            else:
+                traceback.print_tb(result.output.__traceback__)
+        else:
+            return textwrap.indent(f"{self.name}\n\tNot profiled", "\t")
 
 
 problems = []
@@ -47,15 +61,16 @@ class ProblemMeta(type):
 
         # TODO: Change this from using len of bases
         # Makes sure that we are modifying a subclass of Problem and not Problem and that Problem isnt being run as main
-        if len(bases) > 0 and new_cls.__module__ != "__main__":
+        if len(bases) > 0:
             new_cls.solutions = [obj for name, obj in attrs.items() if isinstance(obj, Solution)]
             new_cls.name = kwargs.pop("name")
             new_cls.expected = kwargs.pop("expected", None)
-            new_cls.problem_number = re.search(r"\.([0-9]+)_", new_cls.__module__).group(1)
+            # new_cls.problem_number = re.search(r"/([0-9]+)_", inspect.getfile(new_cls)).group(1)
 
         return new_cls
 
     def __init__(cls, *args, **kwargs):
+        # This only works in __init__ because we need to have access to subclasses
         name, bases, attrs = args
 
         # Adds the problem attr to each solution so we can use it as self
@@ -65,6 +80,12 @@ class ProblemMeta(type):
                     obj.problem = cls
 
             problems.append(cls)
+
+        # This pretty much just automatically adds a main function call to each problem
+        if cls.__module__ == '__main__':
+            print(f"Expected: {cls.expected}")
+            for solution in cls.solutions:
+                print(f"{solution.text()}")
         type.__init__(cls, name, bases, attrs)
 
 
@@ -80,7 +101,7 @@ class Problem(metaclass=ProblemMeta):
         return problems
 
     @classmethod
-    def solution(cls, name=None):
+    def solution(cls, name=None, ignored=False):
         """
         A Decorator to specify a Problem Solution
         :param name:
@@ -88,6 +109,6 @@ class Problem(metaclass=ProblemMeta):
         """
 
         def decorator(func):
-            return Solution(func, name=name)
+            return Solution(func, name=name, ignored=ignored)
 
         return decorator

@@ -1,21 +1,28 @@
-Problem,Solution,Execution Time (ms),Output
-Multiples of 3 and 5,summed_sums,11,233168.0
-Multiples of 3 and 5,brute_force,1023,233168
-Even Fibonacci numbers,naive,10,4613732
-Even Fibonacci numbers,use_only_even,5,4613732
-Largest prime factor,check_all,842,6857
-Largest prime factor,check_only_odd,404,6857
-Largest prime factor,simple,1063,6857.0
-Largest prime factor,squared,164,6857
-Largest palindrome product,brute_force,328270,906609
-Largest palindrome product,improved_brute_force,169829,906609
-Largest palindrome product,improved_search,662,906609
-Smallest multiple,least_common_multiple,33,232792560.0
-Sum square difference,brute_force,40,25164150
-Sum square difference,math,5,25164150.0
-10001st prime,eratosthenes_nth_prime,24200,104743
-Largest product in a series,brute_force,2890,23514624000
-Special Pythagorean triplet,brute_force,17028,31875000
-Special Pythagorean triplet,parametrisation,18,31875000.0
-Summation of primes,sieve_of_eratosthenes,605795,142913828922
-Summation of primes,brute_force,880216,142913828922
+Problem,Solution,Execution Time (seconds),Output
+Multiples of 3 and 5,summed_sums,9.399999999992747e-06,233168.0
+Multiples of 3 and 5,brute_force,0.001073500000000005,233168
+Even Fibonacci numbers,naive,1.089999999998037e-05,4613732
+Even Fibonacci numbers,use_only_even,5.499999999991623e-06,4613732
+Largest prime factor,check_all,0.0008788000000000129,6857
+Largest prime factor,check_only_odd,0.0004282999999999926,6857
+Largest prime factor,simple,0.0010869000000000018,6857.0
+Largest prime factor,squared,0.000161200000000028,6857
+Largest palindrome product,brute_force,0.38470760000000004,906609
+Largest palindrome product,improved_brute_force,0.20419540000000014,906609
+Largest palindrome product,improved_search,0.0010159000000000695,906609
+Smallest multiple,least_common_multiple,4.0099999999876346e-05,232792560.0
+Sum square difference,brute_force,4.8799999999848964e-05,25164150
+Sum square difference,math,4.000000000115023e-06,25164150.0
+10001st prime,eratosthenes_nth_prime,0.02586400000000011,104743
+Largest product in a series,brute_force,0.0030666000000001414,23514624000
+Special Pythagorean triplet,brute_force,0.017318299999999898,31875000
+Special Pythagorean triplet,parametrisation,4.5300000000025875e-05,31875000.0
+Summation of primes,sieve_of_eratosthenes,0.46850269999999994,142913828922
+Summation of primes,brute_force,14.2468937,142913828922
+Largest product in a grid,basic_search,0.0029329000000011263,70600674
+Highly divisible triangular number,brute_force,5.541827699999999,76576500
+Highly divisible triangular number,prime,0.037517300000001086,76576500.0
+Large Sum,naive,1.0099999997237319e-05,5537376230
+Large Sum,first_eleven,0.00011310000000008813,5537376230
+Longest Collatz Sequence,naive,30.456470600000003,837799
+Longest Collatz Sequence,caching_chains,1.4793312999999984,837799
