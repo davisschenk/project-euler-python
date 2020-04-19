@@ -30,3 +30,8 @@ def factors(n):
                       ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0)))
 
 
+def get_digits(n):
+    while n:
+        n, d = divmod(n, 10)
+        yield d
+
