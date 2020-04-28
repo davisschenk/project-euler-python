@@ -17,10 +17,10 @@ class HighlyDivisibleTriangleNumber(Problem, name="Highly divisible triangular n
     def prime(self):
         primes = sieve_of_eratosthenes(1000)
         n = 3
-        dn = 2
-        cnt = 0
+        prime_divisors = 2
+        count = 0
 
-        while cnt <= 500:
+        while count <= 500:
             n += 1
             n1 = n
 
@@ -45,8 +45,8 @@ class HighlyDivisibleTriangleNumber(Problem, name="Highly divisible triangular n
                 if n1 == 1:
                     break
 
-            cnt = dn * dn1
-            dn = dn1
+            count = prime_divisors * dn1
+            prime_divisors = dn1
 
         return n * (n - 1) / 2
 
