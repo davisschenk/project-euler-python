@@ -1,30 +1,16 @@
-from problem import Problem
-import csv
-import traceback
-
-# We have to import all problems so that they get initialized and can be found
 from problems import *
+from problem import Problem
+import time
 
+# TODO: Implement better profiling
+for problem in Problem.all_problems:
+    print(problem.name)
 
-def print_output():
-    for problem in Problem.all_problems():
-        print(f"{problem.problem_number}. {problem.name}")
-        print(f"\tExpected Value: {problem.expected}")
-        for solution in problem.solutions:
-            print(f"\t{solution.text()}")
+    for solution in problem.solutions:
+        start = time.perf_counter()
+        output = solution()
+        end = time.perf_counter()
 
-
-def write_file():
-    with open("output.csv", 'w') as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(["Problem", "Solution", "Execution Time (seconds)", "Output"])
-
-        for problem in Problem.all_problems():
-            print(problem.name)
-            for solution in problem.solutions:
-                result = solution.profile()
-
-                writer.writerow([problem.name, solution.name, result.time, result.output])
-
-
-write_file()
+        print(f"\t{solution.name}")
+        print(f"\t\toutput: {output}")
+        print(f"\t\ttotal time: {end - start:.8f}")
