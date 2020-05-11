@@ -9,9 +9,9 @@ class QuadraticPrime(Problem):
         """
         Loop through all a and b values such that abs(a|b) < 1000
 
-        then count up from 0 and check if the quadratic of the form
-        n^2 + an + b until the output is not a prime and then check if we have beat
-        the best n value
+        then count up from 0 (n) and check if the output of the quadratic
+        n^2 + an + b for each n until the output is no longer a prime
+        check if we beat the max and then rinse and repeat
         """
         best_a, best_b, best_n = 0, 0, 0
 
