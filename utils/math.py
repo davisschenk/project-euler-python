@@ -35,3 +35,11 @@ def get_digits(n):
         n, d = divmod(n, 10)
         yield d
 
+
+def get_first_digit(n):
+    while n >= 10:
+        n /= 10
+
+    return int(n)
+
+
