@@ -1,6 +1,4 @@
 from problem import Problem
-from utils.math import get_digits
-from itertools import permutations
 
 
 class PandigitalProducts(Problem):
@@ -19,6 +17,6 @@ class PandigitalProducts(Problem):
     
     @staticmethod
     def is_pandigital(number):
-        num_s = str(number)
+        number = str(number)
 
-        return len(num_s) == 9 and set(num_s) == set("123456789")
+        return len(number) == 9 and set(number) == set("123456789")
