@@ -5,7 +5,8 @@ This is my repository for keeping track of all problems I complete as a part of 
 ## Goals
 - Organize and keep track of all problems without hard coding them and then being able to automatically test all of my solutions
 - Keeping all working solutions
-- Avoiding the use of outside modules for solving problems
+- Use python and standard modules
+    - I might also use libs like pandas, numpy and more_itertools
 - Optimizing solutions to minimize time/space complexity. I would also like to eventually rank each solution using Big-O notation
 
 

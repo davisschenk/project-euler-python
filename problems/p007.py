@@ -1,6 +1,7 @@
 from math import log
 from utils.primes import sieve_of_eratosthenes
 from problem import Problem
+from more_itertools import nth
 
 
 class NthPrime(Problem, name="10001st prime", expected=104743):
@@ -9,4 +10,4 @@ class NthPrime(Problem, name="10001st prime", expected=104743):
         # This is a mathmatical function which can approximately predict the limit for the nth prime
         # https://www.maa.org/sites/default/files/jaroma03200545640.pdf
         limit = round(n * log(n) + n * (log(log(n - 0.9385))))
-        return sieve_of_eratosthenes(limit)[n - 1]
+        return nth(sieve_of_eratosthenes(limit), n - 1)

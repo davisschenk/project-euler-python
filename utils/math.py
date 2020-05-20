@@ -1,13 +1,14 @@
 from functools import reduce
+from typing import List, Iterator, Set
 
 
-def gcd(a, b):
+def gcd(a: int, b: int) -> int:
     if b == 0:
         return a
     return gcd(b, a % b)
 
 
-def lcm(multiples):
+def lcm(multiples: List[int]) -> float:
     ans = multiples[0]
 
     for i in multiples:
@@ -16,7 +17,7 @@ def lcm(multiples):
     return ans
 
 
-def product(arr):
+def product(arr: Iterator[int]) -> int:
     value = 1
 
     for num in arr:
@@ -25,20 +26,20 @@ def product(arr):
     return value
 
 
-def factors(n):
+def factors(n: int) -> Set[int]:
     return set(reduce(list.__add__,
                       ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0)))
 
 
-def get_digits(n):
+def get_digits(n: int) -> Iterator[int]:
     while n:
         n, d = divmod(n, 10)
         yield d
 
 
-def get_first_digit(n):
+def get_first_digit(n: int) -> int:
     while n >= 10:
-        n /= 10
+        n //= 10
 
     return int(n)
 
