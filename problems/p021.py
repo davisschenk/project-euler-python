@@ -1,6 +1,7 @@
+import math
+
 from problem import Problem
 from utils.math import factors
-import math
 
 
 class AmicableNumbers(Problem, name="Amicable numbers", expected=31626):

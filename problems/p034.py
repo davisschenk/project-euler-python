@@ -1,5 +1,6 @@
-from problem import Problem
 from math import factorial
+
+from problem import Problem
 from utils.math import get_digits
 
 
@@ -12,4 +13,3 @@ class DigitFactorial(Problem):
                 total += i
 
         return total
-

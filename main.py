@@ -1,6 +1,6 @@
-from problems import *
-from problem import Problem
 import time
+
+from problem import Problem
 
 # TODO: Implement better profiling
 for problem in Problem.all_problems:

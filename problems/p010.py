@@ -1,5 +1,5 @@
-from utils.primes import sieve_of_eratosthenes, simple_is_prime
 from problem import Problem
+from utils.primes import sieve_of_eratosthenes, simple_is_prime
 
 
 class SummationOfPrimes(Problem, name="Summation of primes", expected=142913828922):
@@ -10,4 +10,3 @@ class SummationOfPrimes(Problem, name="Summation of primes", expected=1429138289
     @Problem.solution()
     def brute_force(self, limit=2_000_000):
         return 5 + sum(filter(simple_is_prime, range(5, limit + 1, 2)))
-

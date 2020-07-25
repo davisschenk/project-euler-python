@@ -42,5 +42,3 @@ def get_first_digit(n: int) -> int:
         n //= 10
 
     return int(n)
-
-

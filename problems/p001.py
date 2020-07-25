@@ -1,4 +1,5 @@
 from itertools import count, takewhile
+
 from problem import Problem
 
 

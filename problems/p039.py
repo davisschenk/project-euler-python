@@ -8,7 +8,7 @@ class IntegerRightTriangles(Problem):
         for p in range(1000):
             d[p] = 0
 
-            for a in range(1, p//3):
+            for a in range(1, p // 3):
                 a, b, c = self.get_abc(a, p)
 
                 if c.is_integer():
@@ -18,8 +18,8 @@ class IntegerRightTriangles(Problem):
 
     @staticmethod
     def get_abc(a, p):
-        b = (p**2 - 2*p*a) / (2*p - 2*a)
-        c = (a**2 + b**2)**0.5
+        b = (p ** 2 - 2 * p * a) / (2 * p - 2 * a)
+        c = (a ** 2 + b ** 2) ** 0.5
 
         return a, b, c
 

@@ -1,4 +1,5 @@
 import math
+
 from problem import Problem
 
 
@@ -31,7 +32,7 @@ class SumEvenFib(Problem, name="Even Fibonacci numbers", expected=4613732):
         while limit is None or prime_two <= limit:
             yield prime_two
 
-            prime_one, prime_two = prime_two, 4*prime_two+prime_one
+            prime_one, prime_two = prime_two, 4 * prime_two + prime_one
 
     @Problem.solution()
     def use_only_even(self):

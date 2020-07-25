@@ -1,6 +1,5 @@
 from problem import Problem
 from utils.primes import sieve_of_eratosthenes, simple_is_prime
-from itertools import permutations
 
 
 class CircularPrimes(Problem):
@@ -58,4 +57,3 @@ class CircularPrimes(Problem):
         for i in range(len(n)):
             yield int(n)
             n = n[1:] + n[:1]
-

@@ -1,4 +1,5 @@
 from math import sqrt
+
 from problem import Problem
 
 
@@ -83,7 +84,3 @@ class LargestPrimeFactor(Problem, name="Largest prime factor", expected=6857):
         if n == 1:
             return last_factor
         return n
-
-
-
-

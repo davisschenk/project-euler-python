@@ -16,5 +16,3 @@ class CoinSum(Problem):
                 dp[j] += dp[j - coins[i]]
 
         return dp[total]
-
-

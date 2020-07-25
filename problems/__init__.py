@@ -1,5 +1,4 @@
 from pathlib import Path
-from glob import glob
 
 # Find the parent directory of this file and recursively search for python files that follow problem naming scheme
 problems_dir = Path(__file__).parent

@@ -1,6 +1,7 @@
+from itertools import count
+
 from problem import Problem
 from utils.math import get_first_digit, gcd
-from itertools import count
 
 
 class DigitCancellingFraction(Problem):
@@ -52,5 +53,4 @@ class DigitCancellingFraction(Problem):
     def simplify(n, d):
         s = gcd(n, d)
 
-        return n/s, d/s
-
+        return n / s, d / s

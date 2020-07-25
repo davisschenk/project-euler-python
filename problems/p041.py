@@ -1,7 +1,7 @@
-from problem import Problem
 from itertools import permutations
-from utils.primes import sieve_of_eratosthenes, simple_is_prime
-from problems.p032 import PandigitalProducts
+
+from problem import Problem
+from utils.primes import simple_is_prime
 
 
 class PandigitalPrime(Problem):
@@ -13,5 +13,3 @@ class PandigitalPrime(Problem):
                 j = int(''.join(j))
                 if simple_is_prime(j):
                     return j
-
-

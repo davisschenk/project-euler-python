@@ -9,12 +9,12 @@ class PandigitalProducts(Problem):
         for i in range(2, 60):
             start = 1234 if i < 10 else 123
 
-            for j in range(start, 10000//i):
-                if self.is_pandigital(f"{i}{j}{i*j}"):
-                    prods.add(i*j)
+            for j in range(start, 10000 // i):
+                if self.is_pandigital(f"{i}{j}{i * j}"):
+                    prods.add(i * j)
 
         return sum(prods)
-    
+
     @staticmethod
     def is_pandigital(number):
         number = str(number)

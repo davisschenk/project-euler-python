@@ -1,4 +1,5 @@
 from itertools import permutations, islice
+
 from problem import Problem
 
 

@@ -1,5 +1,6 @@
-from problem import Problem
 from itertools import chain
+
+from problem import Problem
 from utils.math import product
 
 grid = [

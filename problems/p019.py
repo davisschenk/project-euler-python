@@ -1,5 +1,6 @@
-from problem import Problem
 from datetime import datetime, timedelta
+
+from problem import Problem
 
 
 class CountingSundays(Problem, name="Counting Sundays", expected=171):

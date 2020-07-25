@@ -1,7 +1,9 @@
 from math import log
-from utils.primes import sieve_of_eratosthenes
-from problem import Problem
+
 from more_itertools import nth
+
+from problem import Problem
+from utils.primes import sieve_of_eratosthenes
 
 
 class NthPrime(Problem, name="10001st prime", expected=104743):

@@ -17,7 +17,7 @@ class LongestCollatzSequence(Problem, name="Longest Collatz Sequence", expected=
                 if num % 2 == 0:
                     num /= 2
                 else:
-                    num = 3*num + 1
+                    num = 3 * num + 1
 
             if best[1] < count:
                 best = (i, count)

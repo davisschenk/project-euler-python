@@ -10,7 +10,7 @@ class NonAbundantSums(Problem):
         limit = 28123
 
         # Avoid recalculating these values over and over
-        abundants = [i for i in range(12, limit+1) if self.is_abundant(i)]
+        abundants = [i for i in range(12, limit + 1) if self.is_abundant(i)]
 
         # Lookup array for finding if it is the sum of two abundants
         is_sum_of_two = [False] * (limit + 1)
@@ -27,4 +27,3 @@ class NonAbundantSums(Problem):
     @staticmethod
     def is_abundant(number):
         return AmicableNumbers.sum_of_proper_divisors(number) > number
-

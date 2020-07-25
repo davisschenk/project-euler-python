@@ -1,6 +1,5 @@
 from problem import Problem
 from problems.p032 import PandigitalProducts
-from itertools import count
 
 
 class PandigitalMultiples(Problem):

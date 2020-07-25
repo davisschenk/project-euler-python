@@ -17,8 +17,8 @@ class LargestPalindromeProduct(Problem, name="Largest palindrome product", expec
         best = 0
         for i in range(999, 100, -1):
             for j in range(999, i, -1):
-                if self.is_palindrome(str(j*i)):
-                    best = max(best, i*j)
+                if self.is_palindrome(str(j * i)):
+                    best = max(best, i * j)
 
         return best
 
@@ -37,9 +37,9 @@ class LargestPalindromeProduct(Problem, name="Largest palindrome product", expec
                 step = -11
 
             for j in range(j_max, i, step):
-                if i*j <= best:
+                if i * j <= best:
                     break
-                if self.is_palindrome(str(j*i)):
+                if self.is_palindrome(str(j * i)):
                     best = max(best, j * i)
 
         return best

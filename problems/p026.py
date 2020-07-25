@@ -1,7 +1,7 @@
-from problem import Problem
-from utils.math import gcd, factors
-from utils.primes import sieve_of_eratosthenes
 from itertools import count
+
+from problem import Problem
+from utils.primes import sieve_of_eratosthenes
 
 
 class ReciprocalCycles(Problem):

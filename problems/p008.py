@@ -13,4 +13,3 @@ class LargestProductInSeries(Problem, name="Largest product in a series", expect
             best = max(best, product(map(int, n)))
 
         return best
-

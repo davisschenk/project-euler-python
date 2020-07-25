@@ -1,6 +1,7 @@
+from itertools import count
+
 from problem import Problem
 from utils.primes import simple_is_prime
-from itertools import count
 
 
 class QuadraticPrime(Problem):
