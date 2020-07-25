@@ -13,14 +13,15 @@ class HighlyDivisibleTriangleNumber(Problem, name="Highly divisible triangular n
             if len(factors(triangle_number)) > 500:
                 return triangle_number
 
-    @Problem.solution()
+    #@Problem.solution()
     def prime(self):
         primes = sieve_of_eratosthenes(1000)
         n = 3
         prime_divisors = 2
-        count = 0
+        c = 0
 
-        while count <= 500:
+        while c <= 500:
+            print(c)
             n += 1
             n1 = n
 
@@ -45,7 +46,7 @@ class HighlyDivisibleTriangleNumber(Problem, name="Highly divisible triangular n
                 if n1 == 1:
                     break
 
-            count = prime_divisors * dn1
+            c = prime_divisors * dn1
             prime_divisors = dn1
 
         return n * (n - 1) / 2

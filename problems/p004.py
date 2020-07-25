@@ -28,7 +28,7 @@ class LargestPalindromeProduct(Problem, name="Largest palindrome product", expec
         step = -1
         j_max = 999
 
-        for i in range(999, 100, -1):
+        for i in range(j_max, 100, step):
             if i % 11 == 0:
                 j_max = 999
                 step = -1

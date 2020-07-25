@@ -17,7 +17,9 @@ class DigitCancellingFraction(Problem):
 
                     if len(non_trivial) == 4:
                         # Return denominator of simplified product of fractions
-                        return self.fraction_product(non_trivial)[1]
+                        numerator, denominator = self.fraction_product(non_trivial)
+
+                        return denominator
 
     @classmethod
     def fraction_product(cls, fractions):
@@ -28,7 +30,7 @@ class DigitCancellingFraction(Problem):
             total_n *= n
             total_d *= d
 
-        return cls.simplify(total_n, total_d)[1]
+        return cls.simplify(total_n, total_d)
 
     @classmethod
     def is_cancelling_fraction(cls, n, d):
