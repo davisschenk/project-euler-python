@@ -3,7 +3,7 @@ from typing import Iterator
 
 
 def sieve_of_eratosthenes(limit: int) -> Iterator[int]:
-    # We use bytearray because its way faster when multiplying
+    # I use bytearray because its way faster when multiplying
     sieve = bytearray([True]) * limit
     zero = bytearray([False])
 
