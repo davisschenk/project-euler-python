@@ -11,15 +11,15 @@ class ConsecutivePrimeSum(Problem):
         max_prime = 0
 
         for start in range(len(primes)):
-            l = 0
+            current_length = 0
             for end in range(start, len(primes)):
                 s = sum(primes[start:end])
-                l += 1
+                current_length += 1
 
                 if s > upper_bound:
                     break
-                elif simple_is_prime(s) and l > max_length:
-                    max_length = l
+                elif simple_is_prime(s) and current_length > max_length:
+                    max_length = current_length
                     max_prime = s
 
         return max_prime
