@@ -1,7 +1,3 @@
-import problem
-import sys
-
-
 class Solution:
     def __init__(self, func, **kwargs):
         self.name = kwargs.get("name") or func.__name__
