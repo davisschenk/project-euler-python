@@ -1,5 +1,5 @@
 from functools import reduce
-from typing import List, Iterator, Set, Iterable
+from typing import Iterator, Set, Iterable
 
 
 def gcd(a: int, b: int) -> int:
@@ -9,10 +9,11 @@ def gcd(a: int, b: int) -> int:
 
 
 def lcm(multiples: Iterable[int]) -> float:
-    ans = multiples[0]
+    multiples = iter(multiples)
+    ans = next(multiples)
 
     for i in multiples:
-        ans = ((i * ans) / (gcd(i, ans)))
+        ans = i * ans / gcd(i, ans)
 
     return ans
 
