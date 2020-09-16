@@ -7,7 +7,7 @@ def sieve_of_eratosthenes(limit: int) -> Iterator[int]:
     sieve = bytearray([True]) * limit
     zero = bytearray([False])
 
-    for p in range(2, int(limit ** 0.5)):
+    for p in range(2, int(limit ** 0.5) + 1):
         if sieve[p]:
             # I chose to use slice assignment because its quicker then looping
             sieve[p ** 2:limit:p] = zero * ((limit - p ** 2 - 1) // p + 1)
