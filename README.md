@@ -1,15 +1,20 @@
-# Project Euler Rewrite
+# Project Euler
 [![CodeFactor](https://www.codefactor.io/repository/github/davisschenk/project-euler-rewrite/badge)](https://www.codefactor.io/repository/github/davisschenk/project-euler-rewrite)
  
-This is my repository for keeping track of all problems I complete as a part of [Project Euler](https://projecteuler.net/).
+This is where I keep track of my solutions for Project Euler problems.
+
+## What is Project Euler?
+> Project Euler is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve. Although mathematics will help you arrive at elegant and efficient methods, the use of a computer and programming skills will be required to solve most problems.
+
+## Why?
+Project Euler contains many difficult mathematical and CS problems. This repository is a place where I am able to store all of the solutions I have created. While currently this is only Python I may later work on solutions in different programming languages.
 
 ## Goals
-- Organize and keep track of all problems without hard coding them and then being able to automatically test all of my solutions
-- Keeping all working solutions
-- Use python and standard modules
-    - I might also use libs like pandas, numpy and more_itertools
-- Optimizing solutions to minimize time/space complexity. I would also like to eventually rank each solution using Big-O notation
+- Build a custom set of tools that I can use to test the performance and validity of my solutions
+- Primarily use base python and modules from the standard lib. Though there are some other modules I might use, such as:
+     - Numpy
+     - Pandas
+     - more-itertools
+- Ensure that I am following python styling (PEP 8) and keeping code readable.
 
-
-
-##### DISCLAIMER: This repository contains answers and code for each of the problems I have completed.
+##### DISCLAIMER: This repository may contain spoilers for Project Euler.
