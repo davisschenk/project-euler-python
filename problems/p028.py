@@ -2,8 +2,6 @@ from problem import Problem
 
 
 class NumberSpiralDiagonals(Problem):
-    # TODO: Could be cool to come back and generate the spiral
-
     @classmethod
     def spiral_sum(cls, n):
         if n == 1:
