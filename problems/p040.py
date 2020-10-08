@@ -37,5 +37,5 @@ class ChampernownesConstant(Problem):
         return number_with_digit // (10 ** digit_count) % 10
 
     @Problem.solution()
-    def solution(self) -> float:
+    def sequence_solution(self) -> float:
         return product(self.get_n_champ(10 ** n) for n in range(7))
