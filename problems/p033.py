@@ -18,7 +18,7 @@ class DigitCancellingFraction(Problem):
 
                     if len(non_trivial) == 4:
                         # Return denominator of simplified product of fractions
-                        numerator, denominator = self.fraction_product(non_trivial)
+                        _, denominator = self.fraction_product(non_trivial)
 
                         return denominator
 
