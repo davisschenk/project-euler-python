@@ -1,4 +1,5 @@
 # Project Euler Rewrite
+[![CodeFactor](https://www.codefactor.io/repository/github/davisschenk/project-euler-rewrite/badge)](https://www.codefactor.io/repository/github/davisschenk/project-euler-rewrite)
  
 This is my repository for keeping track of all problems I complete as a part of [Project Euler](https://projecteuler.net/).
 
