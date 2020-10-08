@@ -33,7 +33,7 @@ class ReciprocalCycles(Problem):
             if c == 1:
                 return i + 1
 
-    # # TODO: Maybe come back and go back to this weird modulus arithmetic
+    # I need to come back and fix this
     # @classmethod
     # def find_period(cls, denominator):
     #     # This works but has overflow issues :(
