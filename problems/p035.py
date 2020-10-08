@@ -54,6 +54,6 @@ class CircularPrimes(Problem):
     def rotations(n):
         n = str(n)
 
-        for i in range(len(n)):
+        for _ in range(len(n)):
             yield int(n)
             n = n[1:] + n[:1]
