@@ -9,7 +9,7 @@ class ChampernownesConstant(Problem):
     @classmethod
     def naive_nth_champ(cls, n: int):
         c = ''
-        for i in range(1, n):
+        for _ in range(1, n):
             c += str(n)
 
         return int(c[n - 1])
