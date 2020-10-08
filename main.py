@@ -1,16 +1,26 @@
 import time
+from concurrent.futures import ProcessPoolExecutor
 
 from problem import Problem
 
-# TODO: Implement better profiling
-for problem in Problem.all_problems:
-    print(problem.name)
 
-    for solution in problem.solutions:
-        start = time.perf_counter()
-        output = solution()
-        end = time.perf_counter()
+def profile(f):
+    print("started")
+    start = time.perf_counter()
+    output = f()
+    end = time.perf_counter()
 
-        print(f"\t{solution.name}")
-        print(f"\t\toutput: {output}")
-        print(f"\t\ttotal time: {end - start:.8f}")
+    return {"output": output, "time": end - start, "class": f.cls, "name": f.name}
+
+
+def main():
+    tasks = []
+    with ProcessPoolExecutor(max_workers=10) as p:
+        for problem in Problem.all_problems:
+            for solution in problem.solutions:
+                tasks.append(p.submit(profile, solution))
+    print(tasks)
+
+
+if __name__ == '__main__':
+    main()

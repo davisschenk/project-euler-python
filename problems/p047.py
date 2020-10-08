@@ -40,4 +40,3 @@ class DistinctPrimeFactors(Problem):
 
             if consecutive == 4:
                 return i - 3
-

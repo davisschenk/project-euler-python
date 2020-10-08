@@ -35,19 +35,17 @@ class LargestGridProduct(Problem, name="Largest product in a grid", expected=706
 
     @classmethod
     def adjacent_vertical(cls, arr, length):
-        for row_index in range(len(arr)):
-            for column_index in range(len(arr[row_index])):
+        for row_index, row in enumerate(arr):
+            for column_index in range(len(row)):
                 if row_index + length <= len(arr):
                     yield [arr[row_index + i][column_index] for i in range(length)]
 
     @classmethod
     def adjacent_diagonal(cls, arr, length, direction=1):
-        for row_index in range(len(arr)):
-            for column_index in range(len(arr[row_index])):
+        for row_index, row in enumerate(arr):
+            for column_index in range(len(row)):
                 if row_index + length <= len(arr) and column_index + length <= len(arr[row_index]):
                     if direction == 1:
                         yield [arr[row_index + i][column_index + i] for i in range(length)]
                     elif direction == -1:
                         yield [arr[row_index + i][column_index - i + length - 1] for i in range(length)]
-
-    # TODO: Maybe come back and create a numpy solution

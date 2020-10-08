@@ -1,6 +1,7 @@
+from itertools import takewhile, count
+
 from problem import Problem
 from utils.primes import sieve_of_eratosthenes, simple_is_prime
-from itertools import takewhile, count
 
 
 class GoldbachsOtherConjecture(Problem):
@@ -59,10 +60,3 @@ class GoldbachsOtherConjecture(Problem):
 
                 if simple_is_prime(delta):
                     break
-
-
-
-
-
-
-
