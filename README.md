@@ -18,4 +18,4 @@ Project Euler contains many difficult mathematical and CS problems. This reposit
   - more-itertools
 - Ensure that I am following python styling (PEP 8) and keeping code readable.
 
-### DISCLAIMER: This repository may contain spoilers for Project Euler.
+### DISCLAIMER: This repository may contain spoilers for Project Euler
