@@ -10,7 +10,3 @@ class Problem(metaclass=problem.ProblemMeta):
             return problem.Solution(func, **kwargs)
 
         return decorator
-
-
-
-
