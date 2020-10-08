@@ -1,7 +1,7 @@
-from problem import Problem
 from itertools import count
-from utils.math import factors, prime_factors
-from utils.primes import simple_is_prime
+
+from problem import Problem
+from utils.math import prime_factors
 
 
 class DistinctPrimeFactors(Problem):
@@ -14,9 +14,9 @@ class DistinctPrimeFactors(Problem):
             while len(set(prime_factors(curr))) == 4:
                 consecutive.append(curr)
                 curr += 1
-            else:
-                if len(consecutive) == 4:
-                    return consecutive[0]
+
+            if len(consecutive) == 4:
+                return consecutive[0]
 
     @Problem.solution()
     def sieve(self):
