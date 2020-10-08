@@ -6,7 +6,7 @@ from utils.primes import simple_is_prime
 
 class PandigitalPrime(Problem):
     @Problem.solution()
-    def solution(self):
+    def brute_force(self):
         for i in (7, 4):  # all other lengths of n are divisible by 3
             digits = reversed("123456789"[:i])
             for j in permutations(digits):
