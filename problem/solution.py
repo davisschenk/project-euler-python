@@ -1,5 +1,8 @@
+from typing import Callable
+
+
 class Solution:
-    def __init__(self, func, **kwargs):
+    def __init__(self, func: Callable, **kwargs):
         self.name = kwargs.get("name") or func.__name__
         self.callback = func
 
@@ -13,6 +16,6 @@ class Solution:
         return self._callback
 
     @callback.setter
-    def callback(self, func):
+    def callback(self, func: Callable):
         self._callback = func
         self.cls = getattr(func, "cls", None)
