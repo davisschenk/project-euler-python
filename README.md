@@ -15,12 +15,12 @@ Project Euler contains many difficult mathematical and CS problems. This reposit
 
 ## Goals
 
-- Build a custom set of tools that I can use to test the performance and validity of my solutions
+-   Build a custom set of tools that I can use to test the performance and validity of my solutions
 
-- Primarily use base python and modules from the standard lib. Though there are some other modules I might use, such as:
-  - Numpy
-  - Pandas
-  - more-itertools
-- Ensure that I am following python styling (PEP 8) and keeping code readable.
+-   Primarily use base python and modules from the standard lib. Though there are some other modules I might use, such as:
+ -  Numpy
+ -  Pandas
+ -  more-itertools
+-   Ensure that I am following python styling (PEP 8) and keeping code readable.
 
 ### DISCLAIMER: This repository may contain spoilers for Project Euler
