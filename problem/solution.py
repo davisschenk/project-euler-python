@@ -12,7 +12,7 @@ class Solution:
         return self.callback(*args, **kwargs)
 
     @property
-    def callback(self):
+    def callback(self) -> Callable:
         return self._callback
 
     @callback.setter

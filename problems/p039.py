@@ -9,7 +9,7 @@ class IntegerRightTriangles(Problem):
             d[p] = 0
 
             for a in range(1, p // 3):
-                a, b, c = self.get_abc(a, p)
+                a, _, c = self.get_abc(a, p)
 
                 if c.is_integer():
                     d[p] += 1
