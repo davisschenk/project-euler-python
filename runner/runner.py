@@ -2,7 +2,7 @@ import time
 from concurrent.futures import ProcessPoolExecutor
 from contextlib import redirect_stdout
 from io import StringIO
-
+from problems import *
 from problem import Problem
 
 
