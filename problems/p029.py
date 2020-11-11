@@ -1,7 +1,7 @@
 from problem import Problem
 
 
-class DistinctPowers(Problem):
+class DistinctPowers(Problem, name="Distinct powers", expected=9183):
     @Problem.solution()
     def brute_force(self):
         # Good ol fashion set comprehension

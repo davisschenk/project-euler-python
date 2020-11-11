@@ -2,7 +2,7 @@ from problem import Problem
 from problems.p004 import LargestPalindromeProduct
 
 
-class DoubleBasedPalindromes(Problem):
+class DoubleBasedPalindromes(Problem, name="Double-base palindromes", expected=872187):
     @Problem.solution()
     def solution(self):
         count = 0

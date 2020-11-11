@@ -4,7 +4,7 @@ from problem import Problem
 from utils.primes import sieve_of_eratosthenes, simple_is_prime
 
 
-class GoldbachsOtherConjecture(Problem):
+class GoldbachsOtherConjecture(Problem, name="Goldbach's other conjecture", expected=5777):
     @Problem.solution()
     def brute_force(self):
         primes = list(sieve_of_eratosthenes(10000))

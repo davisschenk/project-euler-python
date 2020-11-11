@@ -2,7 +2,7 @@ from problem import Problem
 from problems.p032 import PandigitalProducts
 
 
-class PandigitalMultiples(Problem):
+class PandigitalMultiples(Problem, name="Pandigital multiples", expected=932718654):
     @Problem.solution()
     def brute_force(self):
         best = 0

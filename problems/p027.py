@@ -4,7 +4,7 @@ from problem import Problem
 from utils.primes import simple_is_prime
 
 
-class QuadraticPrime(Problem):
+class QuadraticPrime(Problem, name="Quadratic primes", expected=-59231):
     @Problem.solution()
     def brute_force(self):
         """

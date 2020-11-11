@@ -1,7 +1,7 @@
 from problem import Problem
 
 
-class IntegerRightTriangles(Problem):
+class IntegerRightTriangles(Problem, name="Integer right triangles", expected=840):
     @Problem.solution()
     def brute_force(self):
         d = {}

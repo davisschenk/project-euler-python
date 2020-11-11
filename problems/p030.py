@@ -2,7 +2,7 @@ from problem import Problem
 from utils.math import get_digits
 
 
-class DigitFifthPowers(Problem):
+class DigitFifthPowers(Problem, name="Digit fifth powers", expected=443839):
     @Problem.solution()
     def brute(self):
         total = 0

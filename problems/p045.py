@@ -4,7 +4,7 @@ from math import sqrt
 from problem import Problem
 
 
-class TriPentHexNumbers(Problem):
+class TriPentHexNumbers(Problem, name="Triangular, pentagonal, and hexagonal", expected=1533776805):
     @classmethod
     def triangle_number(cls, n: float):
         return n * (n + 1) / 2

@@ -5,7 +5,7 @@ from problem import Problem
 from utils.math import product
 
 
-class ChampernownesConstant(Problem):
+class ChampernownesConstant(Problem, name="Champernowne's constant", expected=210):
     @classmethod
     def naive_nth_champ(cls, n: int):
         c = ''

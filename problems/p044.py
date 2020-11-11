@@ -2,7 +2,7 @@ from problem import Problem
 from problems.p045 import TriPentHexNumbers as Pent
 
 
-class PentagonNumbers(Problem):
+class PentagonNumbers(Problem, name="Pentagon numbers", expected=5482660):
     @Problem.solution()
     def brute_force(self):
         pents = {}

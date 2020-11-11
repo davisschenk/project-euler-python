@@ -9,7 +9,7 @@ def load_words():
         return [w.strip('"') for w in f.read().split(",")]
 
 
-class CodedTriangleNumbers(Problem):
+class CodedTriangleNumbers(Problem, name="Coded triangle numbers", expected=162):
     words = load_words()
 
     @classmethod

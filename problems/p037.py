@@ -2,7 +2,7 @@ from problem import Problem
 from utils.primes import sieve_of_eratosthenes
 
 
-class TruncatablePrime(Problem):
+class TruncatablePrime(Problem, name="Truncatable primes", expected=748317):
     @Problem.solution()
     def solution(self):
         primes = {k: False for k in sieve_of_eratosthenes(1_000_000)}

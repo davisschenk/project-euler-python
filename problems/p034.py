@@ -4,7 +4,7 @@ from problem import Problem
 from utils.math import get_digits
 
 
-class DigitFactorial(Problem):
+class DigitFactorial(Problem, name="Digit factorials", expected=40730):
     @Problem.solution()
     def solution(self):
         total = 0

@@ -1,7 +1,7 @@
 from problem import Problem
 
 
-class PandigitalProducts(Problem):
+class PandigitalProducts(Problem, name="Pandigital products", expected=45228):
     @Problem.solution()
     def brute(self):
         prods = set()

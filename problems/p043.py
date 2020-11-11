@@ -4,7 +4,7 @@ from problem import Problem
 from utils.strings import unique_chars
 
 
-class SubStringDivisibility(Problem):
+class SubStringDivisibility(Problem, name="Sub-string divisibility", expected=16695334890):
     @classmethod
     def check_ss_divisibility(cls, n):
         primes = [2, 3, 5, 7, 11, 13, 17]

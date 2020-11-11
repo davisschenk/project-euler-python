@@ -2,7 +2,7 @@ from problem import Problem
 from utils.primes import sieve_of_eratosthenes
 
 
-class PrimePermutations(Problem):
+class PrimePermutations(Problem, name="Prime permutations", expected=296962999629):
     @Problem.solution()
     def brute_force(self):
         primes = list(sieve_of_eratosthenes(10000))

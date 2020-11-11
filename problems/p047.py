@@ -4,7 +4,7 @@ from problem import Problem
 from utils.math import prime_factors
 
 
-class DistinctPrimeFactors(Problem):
+class DistinctPrimeFactors(Problem, name="Distinct primes factors", expected=134043):
     @Problem.solution()
     def brute_force(self):
         for start in count(2):

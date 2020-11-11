@@ -2,7 +2,7 @@ from problem import Problem
 from utils.primes import sieve_of_eratosthenes, simple_is_prime
 
 
-class ConsecutivePrimeSum(Problem):
+class ConsecutivePrimeSum(Problem, name="Consecutive prime sum", expected=997651):
     @Problem.solution()
     def brute_force(self):
         upper_bound = 1_000_000

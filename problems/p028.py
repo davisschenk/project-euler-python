@@ -1,7 +1,7 @@
 from problem import Problem
 
 
-class NumberSpiralDiagonals(Problem):
+class NumberSpiralDiagonals(Problem, name="Number spiral diagonals", expected=669171001):
     @classmethod
     def spiral_sum(cls, n):
         if n == 1:

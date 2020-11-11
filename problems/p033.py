@@ -4,7 +4,7 @@ from problem import Problem
 from utils.math import get_first_digit, gcd
 
 
-class DigitCancellingFraction(Problem):
+class DigitCancellingFraction(Problem, name="Digit cancelling fractions", expected=100):
     @Problem.solution()
     def brute_force(self):
         non_trivial = set()

@@ -4,7 +4,7 @@ from problem import Problem
 from utils.primes import sieve_of_eratosthenes
 
 
-class ReciprocalCycles(Problem):
+class ReciprocalCycles(Problem, name="Reciprocal cycles", expected=983):
     @Problem.solution()
     def solution(self):
         # Best number, best cycle length

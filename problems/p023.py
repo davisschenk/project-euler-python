@@ -4,7 +4,7 @@ from problem import Problem
 from problems.p021 import AmicableNumbers
 
 
-class NonAbundantSums(Problem):
+class NonAbundantSums(Problem, name="Non-abundant sums", expected=4179871):
     @Problem.solution()
     def solution(self):
         limit = 28123
