@@ -1,7 +1,7 @@
 # Project Euler
 
-[![CodeFactor](https://www.codefactor.io/repository/github/davisschenk/project-euler-rewrite/badge)](https://www.codefactor.io/repository/github/davisschenk/project-euler-rewrite)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d50b94876d1b4f92a8885d0d55b043f6)](https://www.codacy.com/gh/davisschenk/Project-Euler-Rewrite/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=davisschenk/Project-Euler-Rewrite&amp;utm_campaign=Badge_Grade)
+[![CodeFactor](https://www.codefactor.io/repository/github/davisschenk/project-euler-python/badge)](https://www.codefactor.io/repository/github/davisschenk/project-euler-python)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d50b94876d1b4f92a8885d0d55b043f6)](https://www.codacy.com/gh/davisschenk/Project-Euler-Python/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=davisschenk/Project-Euler-Python&amp;utm_campaign=Badge_Grade)
 
 This is where I keep track of my solutions for Project Euler problems.
 
